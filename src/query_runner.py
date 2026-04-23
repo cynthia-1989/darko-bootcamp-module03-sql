@@ -70,7 +70,7 @@ class SQLQueryRunner:
             logger.warning("[SQL] Database not available. Returning empty DataFrame.")
             return pd.DataFrame()
 
-        # Replace {industry} placeholder with the actual schema name
+        # Replace {industry} placeholder with the actual schema name and rememebr to change to schema number
         # This makes SQL files reusable across different industries
         sql = sql.replace("{industry}", self.industry)
 
